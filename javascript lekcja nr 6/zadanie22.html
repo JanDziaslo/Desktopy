@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <title>zadanie22</title>
+    <style>
+        body
+        {
+            background-color: grey;
+        }
+
+    </style>
+</head>
+<body>
+<button id="przycisk" onclick="klik()">opa</button>
+
+<script>
+   function klik()
+   {
+       const opa = document.createElement(`h1`);
+       opa.textContent = "witaj swiecie";
+       document.body.appendChild(opa);
+       document.getElementById("przycisk").style.display = `none`;
+
+   }
+
+</script>
+
+
+</body>
+</html>
