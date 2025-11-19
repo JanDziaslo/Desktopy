@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <title>Formularz</title>
+</head>
+<body>
+<form name="opa">
+    <label for="imie">imie:</label>
+    <input type="text" name="imie" id="imie" ><br><br>
+    <label for="nazwisko">nazwisko:</label>
+    <input type="text" name="nazwisko" id="nazwisko"><br><br>
+    <label for="klasa">klasa:</label>
+    <input type="text" name="klasa" id="klasa"><br><br>
+    <label for="liczba1">liczba1:</label>
+    <input type="number" name="liczba1" id="liczba1"><br><br>
+    <label for="liczba2">liczba2</label>
+    <input type="number" name="liczba2" id="liczba2"><br><br>
+    <button type="button" onclick="formularz()">Wyslij</button>
+</form>
+<div id="wynik">
+
+</div>
+
+</body>
+<script>
+    function formularz()
+    {
+        wynik = document.getElementById("wynik");
+        wynik.innerHTML = document.getElementById("imie").value;
+        wynik.innerHTML = document.getElementById("nazwisko").value;
+        wynik.innerHTML = document.getElementById("klasa").value;
+        wynik.innerHTML = document.getElementById("liczba1").value;
+        wynik.innerHTML = document.getElementById("liczba2").value;
+
+    }
+
+
+
+
+</script>
+</html>
