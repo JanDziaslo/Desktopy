@@ -3,8 +3,21 @@
 <head>
     <meta charset="UTF-8">
     <title>Formularz</title>
+    <style>
+        body
+        {
+            display: flex;
+            float: left;
+        }
+        .wyniki
+        {
+            margin-left: 100px;
+            float: left;
+        }
+    </style>
 </head>
 <body>
+
 <form name="opa">
     <label for="imie">imie:</label>
     <input type="text" name="imie" id="imie" ><br><br>
@@ -18,22 +31,67 @@
     <input type="number" name="liczba2" id="liczba2"><br><br>
     <button type="button" onclick="formularz()">Wyslij</button>
 </form>
-<div id="wynik">
+<div class="wyniki">
+<div id="wynik_imie" style="margin-bottom: 20px"></div>
 
+<div id="wynik_nazwisko" style="margin-bottom: 20px"></div>
+
+<div id="wynik_klasa" style="margin-bottom: 20px"></div>
+
+<div id="wynik_liczba1" style="margin-bottom: 20px"></div>
+<div id="wynik_liczba2" style="margin-bottom: 20px"></div>
 </div>
-
 </body>
 <script>
     function formularz()
     {
-        wynik = document.getElementById("wynik");
-        wynik.innerHTML = document.getElementById("imie").value;
-        wynik.innerHTML = document.getElementById("nazwisko").value;
-        wynik.innerHTML = document.getElementById("klasa").value;
-        wynik.innerHTML = document.getElementById("liczba1").value;
-        wynik.innerHTML = document.getElementById("liczba2").value;
+        wynik_imie = document.getElementById("wynik_imie");
+        wynik_imie.innerHTML = document.getElementById("imie").value;
+
+
+        wynik_nazwisko = document.getElementById("wynik_nazwisko");
+        wynik_nazwisko.innerHTML = document.getElementById("nazwisko").value;
+
+
+        wynik_klasa = document.getElementById("wynik_klasa");
+        wynik_klasa.innerHTML = document.getElementById("klasa").value;
+
+
+        wynik_liczba1 = document.getElementById("wynik_liczba1");
+        var l1 = document.getElementById("liczba1").value;
+        var liczba = l1
+        var pierwsza = true;
+
+        if (liczba < 2) {
+            pierwsza = false;
+        } else {
+            for (let i = 2; i < liczba; i++) {
+                if (liczba % i === 0) {
+                    pierwsza = false;
+                }
+            }
+        }
+
+        if (pierwsza === true) {
+            wynik_liczba1.innerHTML = l1 + " - liczba pierwsza";
+        } else {
+            wynik_liczba1.innerHTML = l1 + " - nie jest liczba pierwsza";
+        }
+
+
+        wynik_liczba2 = document.getElementById("wynik_liczba2");
+
+        function dwojkowy(liczba)
+        {
+            var dwojkowa = liczba.toString(2);
+            return dwojkowa.replace(/(.{4})/g, '$1 ').trim();
+        }
+
+        wynik_liczba2.innerHTML += "Liczba 2: " + dwojkowy(Number(document.getElementById("liczba2").value));
 
     }
+
+
 
 
 
