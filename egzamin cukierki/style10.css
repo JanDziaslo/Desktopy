@@ -1,0 +1,51 @@
+body
+{
+    font-family: Helvetica;
+}
+#gorny1
+{
+    background-color: rgb(146, 184, 112);
+    text-align: center;
+    width: 50%;
+    height: 170px;
+}
+#gorny2
+{
+    background-color: rgb(146, 184, 112);
+    text-align: center;
+    width: 50%;
+    height: 170px;
+}
+#baner
+{
+    background-color: rgb(100, 61, 49);
+    color: white;
+    text-align: center;
+    height: 80px;
+    padding: 5px;
+}
+footer
+{
+    background-color: rgb(100, 61, 49);
+    color: white;
+    text-align: center;
+    height: 80px;
+    padding: 5px;
+}
+#glowna-lewy
+{
+    background-color: rgb(146, 184, 112);
+    width: 50%;
+    height: 450px;
+}
+#glowna-prawy
+{
+    background-color: rgb(146, 184, 112);
+    width: 50%;
+    height: 450px;
+}
+#gorny1 a
+{
+    background: image("cukierki1.jpg");
+
+}
