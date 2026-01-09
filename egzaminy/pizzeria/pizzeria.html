@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <title>Pizzeria Margherita</title>
+    <link rel="stylesheet" href="styl6.css">
+    <script src="script.js"></script>
+</head>
+<body>
+<header>
+    <p>Najlepsza pizza w miescie</p><br>
+    <img src="logo.png" alt="logo" height="100px">
+</header>
+<section class="lewy">
+    <br>
+    <p>U nas zamowisz pizze z dowozem</p><br>
+    <a href="logo.png">Nasze logo</a>
+</section>
+<main><br>
+    <h3>Pizzeria Margherita</h3><br>
+    <p>ul. Botaniczna 4, Zielona Góra</p><br>
+</main>
+<section class="prawy">
+    <h3>Oferta</h3><br>
+    <ol>
+        <li>Pizza</li>
+        <li>Lasagne</li>
+        <li>Sałatki</li>
+    </ol>
+    <br><br>
+    <p><a href="Oferta.txt">Pobierz pełną oferte</a></p>
+</section>
+<section class="dolny">
+    <h3>Oblicz koszt dostawy</h3><br>
+    <form>
+        <input type="checkbox" name="zielona" id="zielona">
+        <label for="zielona">Jestem z Zielonej Góry</label><br><br><br>
+        <p>albo</p><br><br>
+        <label for="km">Podaj liczbe kilometrow od Zielonej Góry</label>
+        <input type="number" name="km" id="km"><br>
+        <button type="button" onclick="oblicz()">Oblicz</button>
+        <p id="wynik">
+        
+        </p>
+    </form>
+</section>
+<footer>
+    <p>Strone internetowa opracowal: <b>JanDziaslo</b></p>
+</footer>
+</body>
+</html>
