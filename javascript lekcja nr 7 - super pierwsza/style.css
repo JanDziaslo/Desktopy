@@ -1,0 +1,28 @@
+*
+{
+    margin: 0;
+    padding: 0;
+}
+
+h1
+{
+    text-align: center;
+    clear: both;
+}
+.lewy
+{
+    float: left;
+    background-color: cyan;
+    width: 50%;
+    height: 200px;
+    text-align: center;
+}
+.prawy
+{
+    background-color: fuchsia;
+    float: left;
+    width: 50%;
+    height: 200px;
+    text-align: center;
+    
+}
