@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <title>Zmieniamy treść listy</title>
+    <style>
+        body
+        {
+            background-color: gray;
+        }
+    </style>
+</head>
+<body>
+<ul id="lista">
+    <li>Dziad</li>
+    <li>Ropucha</li>
+    <li>Szopen</li>
+    <li>Dziaslo</li>
+    <li>Piekaritka</li>
+</ul>
+<button onclick="zmien()">Zmien dane</button>
+
+</body>
+<script>
+    function zmien() {
+        var nowe = prompt("Podaj 5 nowych imion oddzielonych przecinkami:");
+
+        if (nowe) {
+            var noweImiona = nowe.split(",");
+            var lista = document.getElementById('lista');
+            var elementyListy = lista.getElementsByTagName('li');
+
+            for (var i = 0; i < elementyListy.length; i++) {
+                if (noweImiona[i]) {
+                    elementyListy[i].innerHTML = noweImiona[i].trim();
+                }
+            }
+        }
+    }
+</script>
+
+</html>
