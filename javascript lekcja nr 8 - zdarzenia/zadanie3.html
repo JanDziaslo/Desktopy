@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <style>
+        img
+        {
+            width: 100px;
+        }
+    </style>
+    <meta charset="UTF-8">
+    <title>Zadanie 3</title>
+</head>
+<body>
+<img src="img/pou.png" onmouseover="powieksz()" onmouseout="zmniejsz()" alt="pou" id="pou"><br><br><br>
+<img src="img/Data-Backup-icon.png" onmouseover="powieksz2()" onmouseout="zmniejsz2()" alt="backpup" id="backup"><br><br><br>
+<img src="img/docker.png" onmouseover="powieksz3()" onmouseout="zmniejsz3()" alt="docker" id="docker">
+
+</body>
+<script>
+    function powieksz()
+    {
+       var pou = document.getElementById("pou");
+       pou.style.width = "200px";
+    }
+    function powieksz2()
+    {
+        var backup = document.getElementById("backup");
+        backup.style.width = "200px";
+    }
+    function powieksz3()    {
+        var docker = document.getElementById("docker");
+        docker.style.width = "200px";
+    }
+    function zmniejsz()
+    {
+        var pou = document.getElementById("pou");
+        pou.style.width = "100px";
+    }
+    function zmniejsz2()
+    {
+        var backup = document.getElementById("backup");
+        backup.style.width = "100px";
+    }
+    function zmniejsz3()
+    {
+        var docker = document.getElementById("docker");
+        docker.style.width = "100px";
+    }
+</script>
+</html>
