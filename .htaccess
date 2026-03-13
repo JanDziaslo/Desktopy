@@ -10,7 +10,7 @@ Options +Indexes
   IndexOptions +IgnoreCase +NameWidth=* +SuppressRules +SuppressDescription +IconsAreLinks
 
   # Some meta tags to add to the head tag
-  IndexHeadInsert "<title>Wytryszki</title>"
+  IndexHeadInsert "<title>Desktopy</title>"
 
   HeaderName "/directory-listing/header.html"
   ReadmeName "/directory-listing/footer.html"
