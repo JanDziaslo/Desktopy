@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <title>Zadanie 4</title>
+</head>
+<body>
+<form >
+    <input type="number" id="dol" placeholder="zaokraglanie w dol">
+    <button type="button" onclick="antyzakola()">zaokraglij</button>
+</form>
+<p id="odp">
+
+</p>
+</body>
+<script>
+    function antyzakola() {
+        var liczba = document.getElementById("dol").value
+        var dol = Math.floor(liczba)
+        var odp = document.getElementById("odp")
+        odp.innerHTML = dol
+    }
+
+</script>
+</html>

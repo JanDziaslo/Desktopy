@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <title>Zadanie 5</title>
+</head>
+<body>
+<form >
+    <input type="number" id="log" placeholder="Obliczanie loigarytmu">
+    <button type="button" onclick="logarytm()">Oblicz</button>
+</form>
+<p id="odp">
+
+</p>
+</body>
+<script>
+    function logarytm() {
+        var liczba = document.getElementById("log").value
+        var odp = document.getElementById("odp")
+        if (liczba > 0 ) {
+            var dol = Math.log(liczba)
+            odp.innerHTML = dol
+        }
+        else {
+            odp.innerHTML = "liczba musi byc dodatnia"
+        }
+            
+    }
+
+</script>
+</html>

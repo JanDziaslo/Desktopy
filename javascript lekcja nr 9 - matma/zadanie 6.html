@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <title>Zadanie 6</title>
+</head>
+<body>
+<form >
+    <input type="number" id="max1" placeholder="podaj pierwsza liczbe">
+    <input type="number" id="max2" placeholder="podaj druga liczbe">
+    <button type="button" onclick="maks()">Sprawdz</button>
+</form>
+<p id="odp">
+
+</p>
+</body>
+<script>
+    function maks() {
+        var liczba1 = document.getElementById("max1").value
+        var liczba2 = document.getElementById("max2").value
+        var odp = document.getElementById("odp")
+        var maks = Math.max(liczba1, liczba2)
+        odp.innerHTML = maks
+
+    }
+
+</script>
+</html>
