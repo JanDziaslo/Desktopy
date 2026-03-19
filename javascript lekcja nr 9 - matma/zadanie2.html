@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <title>zadanie 2</title>
+</head>
+<body>
+<form >
+    <input type="number" id="gora" placeholder="zakroglanie w gore">
+    <button type="button" onclick="zakola()">zakraglij</button>
+</form>
+<p id="odp">
+    
+</p>
+</body>
+<script>
+    function zakola(){
+        var liczba = document.getElementById("gora").value
+        var zakroglona = Math.ceil(liczba)
+        var odp = document.getElementById("odp")
+        odp.innerHTML = zakroglona
+    }
+</script>
+</html>

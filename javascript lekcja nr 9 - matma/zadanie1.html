@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <title>zadanie 1</title>
+</head>
+<body>
+    <form id="form">
+        <input type="number" placeholder="wartosc bezwzgledna liczby" id="numerek" >
+        <button type="button" onclick="bez()">oblicz</button>
+    </form>
+    <p id="odp">
+
+    </p>
+</body>
+<script>
+    function bez(){
+        var numerek = document.getElementById("numerek").value;
+        console.log(numerek)
+        var bez = Math.abs(numerek)
+        console.log(bez)
+        var odp = document.getElementById("odp")
+        odp.innerHTML = bez
+    }
+</script>
+</html>
