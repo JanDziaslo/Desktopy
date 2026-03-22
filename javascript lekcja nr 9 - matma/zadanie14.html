@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <title>Zadanie 14</title>
+</head>
+<body>
+<form >
+    <input type="number" id="mini1" placeholder="podaj pierwsza liczbe">
+    <input type="number" id="mini2" placeholder="podaj druga liczbe">
+    <button type="button" onclick="mini()">wylosuj</button>
+</form>
+<p id="odp">
+
+</p>
+<!-- juz nawet nie chce mi sie zmieniac nazw zmiennych itp. -->
+</body>
+<script>
+    function mini() {
+        var liczba1 = parseInt(document.getElementById("mini1").value);  // oczywiscie ze wczesniej dzialalo bez parseint ale teraz akurat bez tego nie zadziala
+        var liczba2 = parseInt(document.getElementById("mini2").value);
+        var min = Math.min(liczba1, liczba2);
+        var max = Math.max(liczba1, liczba2);
+        var wylosowana = Math.floor(Math.random() * (max - min + 1)) + min;
+        odp.innerHTML = wylosowana;
+
+    }
+
+</script>
+</html>

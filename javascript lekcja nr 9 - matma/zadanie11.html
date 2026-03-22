@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <title>Zadanie 11</title>
+</head>
+<body>
+<form >
+    <input type="number" id="dol" placeholder="cosinus">
+    <button type="button" onclick="antyzakola()">oblicz</button>
+</form>
+<p id="odp">
+
+</p>
+<!-- juz nawet nie chce mi sie zmieniac nazw zmiennych itp. -->
+</body>
+<script>
+    function antyzakola() {
+        var liczba = document.getElementById("dol").value
+        var dol = Math.cos(liczba)
+        var odp = document.getElementById("odp")
+        odp.innerHTML = dol
+    }
+</script>
+</html>
