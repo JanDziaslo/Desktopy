@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <title>Obiekt date</title>
+</head>
+<body>
+<h1>Zadanie 1</h1>
+<script>
+    let data = new Date();
+    document.write(data);
+</script>
+<h1>Zadanie 2</h1>
+<div id="2"></div>
+<script>
+    let dzien = data.getDate ();
+    let miesiac = data.getMonth () + 1;
+    let rok = data.getFullYear ();
+    document.getElementById("2").innerHTML = dzien + "." + miesiac + "." + rok;
+</script>
+<h1>Zadanie 3</h1>
+<div id="3"></div>
+<script>
+    let godzina = data.getHours();
+    let minuta = data.getMinutes();
+    let sekunda = data.getSeconds();
+    document.getElementById("3").innerHTML = godzina + ":" + minuta + ":" + sekunda;
+</script>
+<h1>Zadanie 4</h1>
+<div id="4"></div>
+<script>
+    switch ( data.getDay() ) {
+        case 0: nazwa = " Niedziela "; break ;
+        case 1: nazwa = " Poniedziałek "; break ;
+        case 2: nazwa = " Wtorek "; break ;
+        case 3: nazwa = " roda "; break ;
+        case 4: nazwa = " Czwartek "; break ;
+        case 5: nazwa = " Piątek"; break ;
+        case 6: nazwa = " Sobota "; break ;
+    }
+    document.getElementById("4").innerHTML = nazwa;
+</script>
+<h1>Zadanie 5</h1>
+<div id="5"></div>
+<script>
+    let cdata = new Date(2030, 1, 1, 12, 30);
+    let cdzien = cdata.getDate ();
+    let cmiesiac = cdata.getMonth ();
+    let crok = cdata.getFullYear ();
+    let cgodzina = cdata.getHours();
+    let cminuta = cdata.getMinutes();
+    document.getElementById("5").innerHTML = cdzien + "." + cmiesiac + "." + crok + " " + cgodzina + ":" + cminuta;
+</script>
+<h1>Zadanie 6</h1>
+<div id="6"></div>
+<script>
+    switch ( data.getDay() ) {
+        case 0: nazwa = " Niedziela "; break ;
+        case 1: nazwa = " Poniedziałek "; break ;
+        case 2: nazwa = " Wtorek "; break ;
+        case 3: nazwa = " roda "; break ;
+        case 4: nazwa = " Czwartek "; break ;
+        case 5: nazwa = " Piątek"; break ;
+        case 6: nazwa = " Sobota "; break ;
+    }
+    document.getElementById("6").innerHTML = nazwa;
+</script>
+<h1>Zadanie 7</h1>
+<div id="7"></div>
+<script>
+    let unix = data.getTime();
+    document.getElementById("7").innerHTML = unix;
+</script>
+<h1>Zadanie 8</h1>
+<div id="8"></div>
+<script>
+    let data4 = new Date();
+    data4.setDate(24);
+    data4.setMonth(12);
+    data4.setFullYear(2028);
+    data4.setHours(18);
+    data4.setMinutes(45);
+    document.getElementById("8").innerHTML = data4;
+</script>
+<h1>Zadanie 9</h1>
+<div id="9"></div>
+<script>
+    if (miesiac === 7 || miesiac === 8){
+        document.getElementById("9").innerHTML = "Są wakacje";
+    }
+    else {
+        document.getElementById("9").innerHTML = "Nie ma wakacji";
+    }
+</script>
+</body>
+</html>
