@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <title>nasluchiwanie zdarzen</title>
+</head>
+<body>
+<form>
+    <input type="text" id="tekst">
+    <button type="button" id="przycisk">Sprawdz dlugosc</button>
+    <p id="wynik">
+
+    </p>
+</form>
+
+</body>
+<script>
+    const przycisk = document.getElementById('przycisk');
+    
+    przycisk.addEventListener('click', function () {
+        const tekst = document.getElementById('tekst').value;
+        const wynik = document.getElementById('wynik');
+        const dlugosc = tekst.length
+        wynik.textContent = 'Liczba znakow: ' + dlugosc;
+    });
+</script>
+</html>
