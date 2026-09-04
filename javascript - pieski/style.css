@@ -1,0 +1,35 @@
+h1
+{
+    text-align: center;
+    background-color: green;
+}
+h3
+{
+    text-align: center;
+
+}
+
+.obrazki
+{
+    text-align: center;
+}
+img
+{
+    height: 250px;
+    width: 250px;
+    margin: 50px;
+    border-color: black;
+    border-style: solid;
+
+}
+footer
+{
+    text-align: right;
+    background-color: green;
+    padding: 10px;
+
+}
+.powiekszony
+{
+    width: 100%;
+}
