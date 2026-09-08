@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <title>Formularz</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+<main>
+<label for="dorosli">Podaj liczbę dorosłych</label>
+<input type="number" id="dorosli" name="dorosli">
+<br><br>
+<label for="dzieci">Podaj liczbę dzieci</label>
+<input type="number" id="dzieci" name="dzieci">
+<br><br>
+<label for="dni">Podaj liczbę dni</label>
+<input type="number" id="dni" name="dni">
+<br><br>
+<button onclick="oblicz()">Oblicz</button>
+    <br><br>
+</main>
+
+    <div id="wynik"></div>
+</body>
+<script>
+    // 35 dorosly 25 dziecko
+    function oblicz() {
+        dorosli = document.getElementById("dorosli").value;
+        dzieci = document.getElementById("dzieci").value;
+        dni = document.getElementById("dni").value;
+        wynik = document.getElementById("wynik");
+        wynik.innerHTML = "Dokonałeś rezerwacji na " + dni + " dni <br> dla " + dorosli + " dorosłych i " + dzieci + " dzieci <br> Koszt całkowity noclegów wynosi: " + (35 * dorosli + 25 * dzieci) * dni + " zł";
+    }
+</script>
+</html>

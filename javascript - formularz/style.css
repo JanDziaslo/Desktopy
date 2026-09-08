@@ -1,0 +1,19 @@
+*
+{
+    margin: 0;
+}
+main
+{
+    background-color: lightblue;
+    padding: 10px;
+}
+#dorosli, #dzieci, #dni
+{
+    margin: 10px;
+}
+#wynik
+{
+    background-color: mediumpurple;
+    padding: 10px;
+    height: 100px;
+}
