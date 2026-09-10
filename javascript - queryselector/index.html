@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <title>zadania 1-4</title>
+</head>
+<body>
+<h1>Zadanie 1</h1>
+<label for="czerwony">Czerwony</label>
+<input type="radio" name="kolor" id="czerwony" value="czerwony"><br>
+<label for="zielony">Zielony</label>
+<input type="radio" name="kolor" id="zielony" value="zielony"><br>
+<label for="niebieski">Niebieski</label>
+<input type="radio" name="kolor" id="niebieski" value="niebieski"><br>
+<input type="button" value="Sprawdź" id="kolor" onclick="opa()">
+
+
+
+<h1>Zadadnie 2</h1>
+
+<input type="radio" name="jezyk" id="javascript" value="javascript">
+<label for="javascript">JavaScript</label><br>
+<input type="radio" name="jezyk" id="python" value="python">
+<label for="python">Python</label><br>
+<input type="radio" name="jezyk" id="java" value="java">
+<label for="java">Java</label><br>
+<input type="radio" name="jezyk" id="c#" value="c#">
+<label for="c#">C#</label><br>
+<input type="button" value="Sprawdź" id="jezyk" onclick="jezyk()">
+
+<div id="wynik">
+
+</div>
+
+<h1>Zadanie 3</h1>
+
+<input type="radio" name="ocena" id="1" value="1 - bardzo zle">
+<label for="1">1 - bardzo źle</label><br>
+<input type="radio" name="ocena" id="2" value="2 - źle">
+<label for="2">2 - źle</label><br>
+<input type="radio" name="ocena" id="3" value="3 - średnio">
+<label for="3">3 - średnio</label><br>
+<input type="radio" name="ocena" id="4" value="4 - dobrze">
+<label for="4">4 - dobrze</label><br>
+<input type="radio" name="ocena" id="5" value="5 - bardzo dobrze">
+<label for="5">5 - bardzo dobrze</label><br>
+<input type="button" value="Sprawdź" id="ocena" onclick="ocena()">
+
+<div id="wynik2">
+
+</div>
+
+<h1>Zadanie 4</h1>
+
+<h3>Jaka metoda służy do pobrania elementu HTML za pomocą selektora CSS?</h3>
+
+<input type="radio" name="metoda" id="get" value="getElementById()">
+<label for="get">getElementById()</label><br>
+<input type="radio" name="metoda" id="query" value="querySelector()">
+<label for="query">querySelector()</label><br>
+<input type="radio" name="metoda" id="getel" value="createElement()">
+<label for="getel">createElement()</label><br>
+<input type="radio" name="metoda" id="add" value="addEventListener()">
+<label for="add">addEventListener()</label><br>
+<input type="button" value="Sprawdź" id="metoda" onclick="metoda()">
+
+<div id="wynik3">
+
+</div>
+</body>
+<script>
+    function opa() {
+        const wybrana = document.querySelector(
+            'input[name="kolor"]:checked'
+        );
+            if (wybrana) {
+                console.log(wybrana.value)
+            }
+    }
+
+    function jezyk() {
+        const wybrana = document.querySelector(
+            'input[name="jezyk"]:checked'
+        );
+            if (wybrana) {
+                document.getElementById("wynik").innerHTML = "<p>Wybrany język to: " + wybrana.value + "</p>";
+            }
+            else {
+                document.getElementById("wynik").innerHTML = "<p> wybierz jezyk";
+            }
+    }
+    function ocena() {
+        const wybrana = document.querySelector(
+            'input[name="ocena"]:checked'
+        );
+            if (wybrana) {
+                document.getElementById("wynik2").innerHTML = "<p>Wybrana ocena to: " + wybrana.value + "</p> <br> dziekujemy za ocene";
+            }
+            else {
+                document.getElementById("wynik2").innerHTML = "<p> wybierz ocene przed wyslaniem";
+            }
+    }
+    function metoda() {
+        const wybrana = document.querySelector(
+            'input[name="metoda"]:checked'
+        );
+            if (wybrana.value === "querySelector()" ) {
+               document.getElementById("wynik3").innerHTML = "Poprawna odpowiedz!";
+            }
+            else if (wybrana.value !== "querySelector()" ) {
+                document.getElementById("wynik3").innerHTML = "Bledna odpowiedz";
+            }
+            else {
+                document.getElementById("wynik3").innerHTML = "Wybierz odpowiedz";
+            }
+    }
+</script>
+</html>
