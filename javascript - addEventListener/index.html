@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <title>Zadanie</title>
+</head>
+<body>
+<input type="text" name="dlugosc" id="dlugosc">
+<button id="przycisk">Sprawdź długość</button>
+<p id="wynik"> </p>
+</body>
+<script>
+    const przycisk = document.getElementById("przycisk");
+
+
+    przycisk.addEventListener("click", function () {
+        const dlugosc = document.getElementById("dlugosc").value.length;
+        console.log(dlugosc);
+        document.getElementById("wynik").textContent = "Liczba znaków: " + dlugosc;
+
+    })
+</script>
+</html>
