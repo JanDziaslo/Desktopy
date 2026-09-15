@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <title>Listy</title>
+</head>
+<body>
+    <h1>Zadanie 1</h1>
+        <select id="miasta">
+            <option value="warszawa">Warszawa</option>
+            <option value="krakow">Kraków</option>
+            <option value="Siedlce">Siedlce</option>
+            <option value="lublin">Lublin</option>
+        </select>
+        <input type="button" name="pokaz" id="pokaz" value="Pokaż" onclick="zadanie1()">
+    <p id="zadanie1"></p>
+
+    <h1>Zadanie 2</h1>
+        <select id="kierunki">
+            <option value="">Wybierz kierunek</option>
+            <option value="Technik ekonomista">Technik ekonomista</option>
+            <option value="Technik informatyk">Technik informatyk</option>
+            <option value="Technik handlowiec">Technik handlowiec</option>
+        </select>
+    <input type="button" name="sprawdz" id="sprawdz" value="Sprawdź" onclick="zadanie2()">
+    <p id="zadanie2"></p>
+
+    <h1>Zadanie 3</h1>
+        <select id="kolorki" onchange="zadanie3()">
+            <option value="red">Czerwony</option>
+            <option value="green">Zielony</option>
+            <option value="blue">Niebieski</option>
+        </select>
+    <p id="zadanie3">JavaScript jest językiem skryptowym</p>
+
+    <h1>Zadanie 4</h1>
+    <select id="rozmiar" onchange="zadanie4()">
+        <option value="16px">16px</option>
+        <option value="20px">20px</option>
+        <option value="30px">30px</option>
+        <option value="40px">40px</option>
+    </select>
+    <p id="zadanie4">JavaScript jest językiem skryptowym</p>
+
+    <h1>Zadanie 5</h1>
+    <select id="produkt">
+        <option value="3000">Laptop</option>
+        <option value="1200">Monitor</option>
+        <option value="100">Myszka</option>
+        <option value="200">Klawiatura</option>
+    </select>
+    <input type="button" name="sprawdz" id="sprawdz" value="sprawdz" onclick="zadanie5()">
+    <p id="zadanie5"></p>
+</body>
+<script>
+    function zadanie1() {
+        var miasto = document.getElementById("miasta").value;
+        document.getElementById("zadanie1").innerHTML = "Wybrane miasto: " + miasto;
+    }
+
+    function zadanie2() {
+        var kierunek = document.getElementById("kierunki").value;
+        if (kierunek === "") {
+            document.getElementById("zadanie2").innerHTML = "Wybrany kierunek"
+        }
+        else {
+            document.getElementById("zadanie2").innerHTML = "Wybrany kierunek: " + kierunek;
+        }
+    }
+    function zadanie3() {
+        var kolorek = document.getElementById("kolorki").value;
+        document.getElementById("zadanie3").style.color = kolorek;
+    }
+    function zadanie4() {
+        var rozmiar = document.getElementById("rozmiar").value;
+        document.getElementById("zadanie4").style.fontSize = rozmiar;
+    }
+    function zadanie5() {
+        var produkt = document.getElementById("produkt").value
+        document.getElementById("zadanie5").innerHTML = "Cena produktu: " + produkt;
+    }
+</script>
+</html>
