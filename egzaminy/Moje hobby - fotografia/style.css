@@ -1,0 +1,55 @@
+
+body
+{
+    background: beige;
+    margin: 0px;
+}
+header
+{
+    background: sienna;
+    color: white;
+    text-align: center;
+    padding: 15px;
+
+}
+a
+{
+    text-decoration: none;
+    color: white;
+    padding: 15px;
+}
+#spk
+{
+    background: whitesmoke;
+    float: left;
+    width: 66%;
+}
+#sprzet, #kompozycja
+{
+    border: black solid 2px;
+    padding: 20px;
+    border-radius: 20px;
+    margin: 20px;
+    background: whitesmoke;
+
+
+}
+#porady
+{
+    border: black solid 1px;
+    border-radius: 5px;
+    background: whitesmoke;
+    float: left;
+    width: 30%;
+    padding: 10px;
+    margin-left: 20px;
+}
+footer
+{
+    text-align: center;
+    background: sienna;
+    padding: 20px;
+    color: white;
+    margin-top: 70px;
+    clear: both;
+}
