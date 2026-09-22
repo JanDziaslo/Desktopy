@@ -1,0 +1,50 @@
+body
+{
+    background: gray;
+}
+header
+{
+    text-align: center;
+}
+h1
+{
+    display: inline-block;
+    vertical-align: center;
+    font-size: 80px;
+    padding-left: 50px;
+}
+main
+{
+    background: lightgreen;
+    text-align: center;
+}
+#blizniaki
+{
+    background: lightgray;
+    float: left;
+    width: 10%;
+    margin-left: 25%;
+    height: 200px;
+}
+#cezar
+{
+    background: lightgray;
+    float: left;
+    width: 10%;
+    margin-left: 150px;
+    height: 200px;
+}
+#logarytm
+{
+    background: lightgray;
+    float: left;
+    width: 10%;
+    margin-left: 150px;
+    height: 200px;
+}
+footer
+{
+    clear: both;
+    background: cyan;
+    padding: 20px;
+}
