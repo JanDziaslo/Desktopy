@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <title>Obiekt Date</title>
+</head>
+<body>
+    <h1>Zadanie 1</h1>
+    <script>
+        var data1 = new Date();
+        document.write(data1);
+    </script>
+
+    <h1>Zadanie 2</h1>
+    <script>
+        var data2 = new Date();
+        document.write("Dzien miesiaca: " + data2.getDate() + "<br>");
+        document.write("Dzien tygodnia: " + data2.getDay() + "<br>");
+        document.write("miesiac: " + data2.getMonth())
+    </script>
+
+    <h1>Zadanie 3</h1>
+    <script>
+        var data3 = new Date();
+        document.write("Godzina: " + data3.getHours() + "<br>")
+        document.write("Minuty: " + data3.getMinutes() + "<br>")
+        document.write("Sekundy: " + data3.getSeconds() + "<br>")
+    </script>
+
+    <h1>Zadanie 5</h1>
+    <script>
+        var data5 = new Date();
+        document.write("Czas w UTC: " + data5.toUTCString() + "<br>");
+        document.write("Czas lokalny: " + data5.toLocaleString());
+    </script>
+
+    <h1>Zadanie 6</h1>
+    <script>
+        var data6 = new Date();
+        data6.setDate(15)
+        document.write("zmieniona data: " + data6.getDate())
+    </script>
+    <h1>Zadanie 7</h1>
+    <script>
+        var data7 = new Date();
+        data7.setHours(12)
+        data7.setMinutes(30)
+        data7.setSeconds(0)
+        document.write("Zmieniony czas: " + data7)
+    </script>
+
+    <h1>Zadanie 10</h1>
+    <p>Informacje o dacie</p>
+    <script>
+        var data10 = new Date();
+        document.write("Dzisiaj jest: " + data10 + "<br>")
+        document.write("Czas w UTC: " + data10.toUTCString() + "<br>");
+        document.write("Czas lokalny: " + data10.toLocaleString() + "<br>");
+        document.write("Miesciac: " + data10.getMonth() + "<br>")
+        document.write("Dzien miesiaca: " + data10.getDate() + "<br>")
+        document.write("Dzien tygodnia: " + data10.getDay() + "<br>")
+        document.write("Godzina: " + data10.getHours() + "<br>");
+        document.write("Minuty: " + data10.getMinutes() + "<br>")
+        document.write("Sekundy: " + data10.getSeconds() + "<br>")
+    </script>
+</body>
+</html>
