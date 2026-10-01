@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <title>Array</title>
+</head>
+<body>
+    <h1>Zadanie 1</h1>
+
+    <script>
+        var tab = new Array(5);
+
+    </script>
+    <br>
+    <h1>Zadanie 2</h1>
+
+    <script>
+        var tab2 = new Array("Anna", "Kasia", "Basia", "Ola");
+        document.write(tab2[0]);
+    </script>
+
+    <h1>Zadanie 3</h1>
+
+    <script>
+        var tab3 = new Array(5);
+        for(var i=0; i<5; i++) {
+            tab3[i] = Math.round(Math.random()*100);
+            document.write(tab3[i] + "<br>");
+        }
+    </script>
+
+    <h1>Zadanie 4</h1>
+
+    <script>
+        var tab4 = new Array(10);
+
+        for (var i=0; i<10; i++) {
+            var p = prompt("Podaj wartość dla elementu " + i +" tablicy: " );
+            tab4[i] = p;
+            document.write(tab4[i] + "<br>");
+        }
+    </script>
+
+    <h1>Zadanie 6</h1>
+
+    <script>
+        var tab6 = new Array(5, 10, 15);
+        var tab66 = new Array(20, 25, 30);
+
+        document.write(tab6.concat(tab66))
+    </script>
+
+    <h1>Zadanie 7</h1>
+
+    <script>
+        var tab6 = new Array("Anna", "Kasia", "Basia");
+        document.write(tab6.join());
+    </script>
+
+    <h1>Zadanie 8</h1>
+
+    <script>
+        var tab8 = new Array(5, 10, 15, 20);
+        tab8.pop();
+        document.write(tab8)
+    </script>
+
+    <h1>Zadanie 9</h1>
+
+    <script>
+        var tab9 = new Array(5, 10, 15);
+        tab9.push(20)
+        document.write(tab9)
+    </script>
+
+    <h1>Zadanie 10</h1>
+    <script>
+        var tab10 = new Array(1,2,3,4,5);
+        tab10.reverse();
+        document.write(tab10)
+    </script>
+
+    <h1>Zadanie 11</h1>
+    <script>
+        var tab11 = new Array(8, 5, 36, 15, 2);
+        tab11.sort((a, b) => a - b);
+        document.write(tab11)
+    </script>
+
+    <h1>Zadanie 13</h1>
+
+    <script>
+        var tab13 = new Array(5, 8, 36);
+        var tab31 = new Array(15, 5, 123, 45);
+        tab13 = tab13.concat(tab31)
+        document.write(tab13 + "<br>")
+        tab13 = tab13.sort((a, b) => a - b);
+        document.write(tab13 + "<br>")
+        tab13 = tab13.reverse();
+        document.write(tab13 + "<br>")
+    </script>
+
+    <h1>Zadanie 14</h1>
+
+    <script>
+        var tab14 = new Array(2)
+        for(var i=0;i<2; i++) {
+            tab[i] = [Math.round((Math.random() * 100) % 5), Math.round((Math.random() * 100) % 5)]
+
+        }
+        document.write(tab14)
+    </script>
+
+    <h1>Zadanie 15</h1>
+    <script>
+        var tab15 = new Array(2);
+        for (i = 0; i < 2; i++)
+        {
+            tab15[i] = [Math.round((Math.random() * 100) % 5), Math.round((Math.random() * 100) % 5), Math.round((Math.random() * 100) % 5)]
+        }
+        for (i=0; i<2; i++) {
+            document.write(tab15[i] + "<br>");
+        }
+    </script>
+</body>
+</html>
