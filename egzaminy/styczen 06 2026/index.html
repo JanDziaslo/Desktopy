@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <title>Tatuaże</title>
+  <link rel="stylesheet" href="styl.css">
+</head>
+<body>
+    <nav id="nawigacja1">
+      <img src="pliki16/logo.png" alt="salon" id="logo">
+    </nav>
+
+    <nav id="nawigacja2">
+      <h1>Studio Tatuażu</h1>
+    </nav>
+
+    <aside>
+      <h3>Dodaj wzór</h3>
+      <label for="wzor">Wzór:</label><br>
+
+      <input type="file" accept="image/png" id="wzor"><br>
+      <label for="kolor">Kolor:</label><br>
+
+      <select name="kolor" id="kolor">
+        <option value="czarny">Czarny</option>
+        <option value="czerwony">Czerwony</option>
+        <option value="zielony">Zielony</option>
+        <option value="Niebieski">Niebieski</option>
+      </select><br>
+      <label for="cena">Cena:</label><br><br>
+      <input type="number" name="cena" id="cena"><br>
+      <button onclick="skrypt()">Dodaj wzór</button>
+    </aside>
+
+    <section>
+      <h2>Galeria</h2>
+      <img src="pliki16/smok.png" class="miniatury" alt="smok">
+      <img src="pliki16/koliber.png" class="miniatury" alt="koliber">
+    </section>
+
+    <footer>
+      <p>Autor Strony: Jan Dziąsło</p>
+    </footer>
+
+</body>
+
+<script>
+  function skrypt() {
+    var sciezka = document.getElementById("wzor");
+    var kolor = document.getElementById("kolor").value
+    var cena = document.getElementById("cena").value
+
+    if (sciezka.files.length > 0 ) {
+      if (cena > 0) {
+        var plik = sciezka.files[0].name;
+        console.log(plik);
+        alert("Wzór: " + plik + ", kolor " + kolor + " cena " + cena)
+        var obraz = document.createElement("img");
+        obraz.src = plik;
+        obraz.alt = plik;
+        obraz.className = "miniatury";
+        document.querySelector("section").appendChild(obraz);
+      } else {
+        alert("Uzupelnij wszystkie pola")
+      }
+    } else {
+      alert("Uzupelnij wszystkie pola")
+    }
+
+  }
+</script>
+</html>
