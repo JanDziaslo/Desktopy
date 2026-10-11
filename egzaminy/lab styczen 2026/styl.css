@@ -1,0 +1,51 @@
+body {
+    font-family: Verdana,sans-serif;
+    background-color: #D4F1F4;
+    color: #05445E;
+}
+#login-main {
+    width: 50em;
+    margin: auto;
+    padding: 20px;
+}
+footer {
+    text-align: right;
+}
+header {
+    margin: 40px;
+}
+#tabela {
+    margin: 40px;
+    padding: 20px;
+}
+#login-main, header, #tabela {
+    background-color: #75E6DA;
+    border-radius: 5px;
+    box-shadow: 10px 10px 5px lightblue;
+}
+h1, h2, form {
+    text-align: center;
+}
+form {
+    margin: 10px;
+}
+button {
+    width: 14em;
+}
+table, tr {
+    margin: auto;
+    border-collapse: collapse;
+}
+table, td{
+    border: 1px #189AB4;
+}
+th,td {
+    padding: 10px;
+}
+a {
+    text-decoration: none;
+}
+td:hover {
+    background-color: white;
+    opacity: 0.8;
+}

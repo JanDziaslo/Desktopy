@@ -1,0 +1,29 @@
+-- Zapytanie 1
+SELECT imie, nazwisko
+FROM Diagnosta
+ORDER BY nazwisko DESC;
+
+-- Zapytanie 2
+SELECT DATE(data) AS data, COUNT(*) AS liczba_zlecen
+FROM Zlecenie
+GROUP BY DATE(data)
+ORDER BY DATE(data);
+
+-- Zapytanie 3
+SELECT Zlecenie.data
+FROM Zlecenie
+JOIN Pacjent ON Zlecenie.idPacjenta = Pacjent.id
+WHERE Pacjent.nazwisko = 'Nowicki';
+
+-- Zapytanie 4
+SELECT
+    Pacjent.imie,
+    Pacjent.nazwisko,
+    Pacjent.pesel,
+    Zlecenie.data AS data_zlecenia,
+    Wynik.data AS data_wyniku,
+    Wynik.plik
+FROM Zlecenie
+JOIN Pacjent ON Zlecenie.idPacjenta = Pacjent.id
+LEFT JOIN Wynik ON Wynik.idZlecenia = Zlecenie.id
+ORDER BY Zlecenie.id;
