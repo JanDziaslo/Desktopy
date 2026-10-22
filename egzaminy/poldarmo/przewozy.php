@@ -1,3 +1,26 @@
+<?php
+$polaczenie = mysqli_connect("100.110.228.126", "root", "M2xjEm9f57R34Xub48xtH5cT56FLv7sq","przewozy", 13306);
+
+$zapytanie = "SELECT id_zadania, zadanie, data FROM zadania;";
+$wynik = mysqli_query($polaczenie, $zapytanie);
+
+if(isset($_GET['id'])) {
+    $id = $_GET['id'];
+    $zapytanie3 = "DELETE FROM zadania WHERE id_zadania = $id;";
+    mysqli_query($polaczenie, $zapytanie3);
+
+}
+if (isset($_POST['zadanie'])) {
+    if (isset($_POST['data'])) {
+        $zadanie = $_POST['zadanie'];
+        $data = $_POST['data'];
+        $zapytanie2 = "INSERT INTO zadania (zadanie, data, osoba_id) VALUES ('$zadanie', '$data', 1);";
+        mysqli_query($polaczenie,$zapytanie2);
+    }
+}
+
+?>
+
 <!DOCTYPE html>
 <html lang="pl">
 <head>
@@ -26,6 +49,17 @@
                     <td>Data realizacji</td>
                     <td>Usuń</td>
                 </tr>
+                <?php
+                while($wiersz = mysqli_fetch_array($wynik)) {
+                    echo "<tr>";
+                    echo "<th>" . $wiersz['zadanie']. "</th>";
+                    echo "<th>" . $wiersz['data'] . "</th>";
+                    echo '<th> <a href="?id=' .$wiersz["id_zadania"] .  '">Usuń</a>'. "</th>";
+                    echo "</tr>";
+                }
+
+
+                ?>
             </table>
             <form action="przewozy.php" method="post">
                 <label for="zadanie">Zadanie do wykonania</label>
@@ -54,3 +88,6 @@
     </footer>
 </body>
 </html>
+<?php
+mysqli_close($polaczenie);
+?>
