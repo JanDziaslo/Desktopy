@@ -12,8 +12,8 @@ if(isset($_GET['id'])) {
 }
 if (isset($_POST['zadanie'])) {
     if (isset($_POST['data'])) {
-        $zadanie = $_POST['zadanie'];
-        $data = $_POST['data'];
+        $zadanie = $_POST['zadanie'] ?? '';
+        $data = $_POST['data'] ?? '';
         $zapytanie2 = "INSERT INTO zadania (zadanie, data, osoba_id) VALUES ('$zadanie', '$data', 1);";
         mysqli_query($polaczenie,$zapytanie2);
     }
